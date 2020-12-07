@@ -23,13 +23,17 @@ app.use((req, res, next) => {
 app.route('/api')
   .get(async(req, res) => {
     console.log('GET request detected');
+
+    const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
+    // omdb api 
+    const json = await data.json();
     console.log('fetch request data', json);
+    res.json(json);
+
   })
   .post(async(req, res) => {
     
     console.log('POST request detected');
-    const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
-    const json = await data.json();
     res.json(json);
   });
 
