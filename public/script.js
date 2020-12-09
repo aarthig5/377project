@@ -1,4 +1,4 @@
-const API_URL = 'http://www.omdbapi.com/?apikey=[yourkey]&';
+const API_URL = 'http://www.omdbapi.com/?apikey=[3444e26e]&';
 
 // RapidAPI request headers
 const REQUEST_HEADERS = {
