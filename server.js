@@ -24,7 +24,7 @@ app.route('/api')
   .get(async(req, res) => {
     console.log('GET request detected');
 
-    const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
+    const data = await fetch('hhttp://www.omdbapi.com/?i=tt3896198&apikey=3444e26e');
     // omdb api 
     const json = await data.json();
     console.log('fetch request data', json);
