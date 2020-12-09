@@ -7,6 +7,26 @@ const REQUEST_HEADERS = {
   , 'Content-Type': 'application/x-www-form-urlencoded'
 };
 
+
+const analyzeComment = (comment, callback) => {
+    // Creating an object to send to the server
+    const data = {
+            text: comment
+            , language: 'english'
+    };
+    // Encoding data for application/x-www-form-urlencoded content type
+    const formattedData = Qs.stringify(data);
+    // POST request to server
+    axios.post(API_URL, formattedData, { headers: REQUEST_HEADERS })
+            .then(response => {
+               const data = response.data;
+              // Calling a callback function with data from the server
+              callback(data)
+            })
+            .catch(error => console.error(error))
+  };
+
+  
 function handleClick(event) {
 
 }
