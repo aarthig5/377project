@@ -1,11 +1,11 @@
-// const API_URL = 'https://japerk-text-processing.p.rapidapi.com/sentiment/';
+const API_URL = 'http://www.omdbapi.com/?apikey=[yourkey]&';
 
-// // RapidAPI request headers
-// const REQUEST_HEADERS = {
-//   'X-RapidAPI-Host': 'japerk-text-processing.p.rapidapi.com'
-//   , 'X-RapidAPI-Key': '7xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-//   , 'Content-Type': 'application/x-www-form-urlencoded'
-// };
+// RapidAPI request headers
+const REQUEST_HEADERS = {
+  'X-RapidAPI-Host': 'omdbapi.com/?apikey='
+  , 'X-RapidAPI-Key': '3444e26e'
+  , 'Content-Type': 'application/x-www-form-urlencoded'
+};
 
 function handleClick(event) {
 
