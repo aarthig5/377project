@@ -20,22 +20,30 @@ app.use((req, res, next) => {
   next();
 });
 
-app.route('/api')
-  .get(async(req, res) => {
-    console.log('GET request detected');
 
-    const data = await fetch('http://www.omdbapi.com/?i=tt3896198&apikey=3444e26e');
-    // omdb api 
-    const json = await data.json();
-    console.log('fetch request data', json);
-    res.json(json);
+app.get('/api/:search', async (req, res) => {
+  console.log('GET request detected');
 
-  })
-  .post(async(req, res) => {
-    
-    console.log('POST request detected');
-    res.json(json);
-  });
+  const head = 'http://www.omdbapi.com/?t='
+  const api_key = '&apikey=3444e26e';
+  const search_val = req.params['search']
+
+
+
+  const API_URL = head + search_val + api_key
+
+  const data = await fetch(API_URL);
+
+  const json = await data.json();
+  console.log('fetch request data', json);
+  res.json(json);
+});
+
+
+
+app.post('/api', async (req, res) => {
+
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
