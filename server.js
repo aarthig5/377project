@@ -24,7 +24,7 @@ app.route('/api')
   .get(async(req, res) => {
     console.log('GET request detected');
 
-    const data = await fetch('hhttp://www.omdbapi.com/?i=tt3896198&apikey=3444e26e');
+    const data = await fetch('http://www.omdbapi.com/?i=tt3896198&apikey=3444e26e');
     // omdb api 
     const json = await data.json();
     console.log('fetch request data', json);
