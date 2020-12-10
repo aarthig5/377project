@@ -1,13 +1,31 @@
 
 
 <html lang="en">
+
 <head>
-    <title>Aarthi Ganesh, Jaylin Young 377 Final Project</title>
+    <title>Aarthi Ganesh, Jaylin Young, and Vidur Gupta's 377 Final Project</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script src=""></script>
     <img src="film-solid.svg" alt="Firefilm Logo">
 </head>
+
 <body>
-    <h1>Movie Name: </h1>
+    <div class="container">
+        <div class="header">
+            <h1>Movie Name: </h1>
+        </div>
+        <form class="movie">
+            <input class="search" id="userInput" name="search" type="text" placeholder="Search By: Movie Name"></input>
+            <ul class="suggestions">
+                <li>
+                    Search Example Movie
+                </li>
+            </ul>
+        </form>
+    </div>
+    <script src="script.js"></script>
+
 </body>
+
 </html>
