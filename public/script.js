@@ -1,9 +1,5 @@
 function handleClick(event) {
-
-
-//function handleClick(event) {
-
-//}
+}
 
 async function main() {
     try {
@@ -41,7 +37,8 @@ async function main() {
 
 }
 
+
 window.onload = main;
-
-
 // exist & be invoked inside main function 
+
+// lab 7 & assignment 2
