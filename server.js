@@ -28,8 +28,6 @@ app.get('/api/:search', async (req, res) => {
   const api_key = '&apikey=3444e26e';
   const search_val = req.params['search']
 
-
-
   const API_URL = head + search_val + api_key
 
   const data = await fetch(API_URL);
