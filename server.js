@@ -25,7 +25,7 @@ app.get('/api/:search', async (req, res) => {
   console.log('GET request detected');
 
   const head = 'http://www.omdbapi.com/?t='
-  const api_key = '&apikey=3444e26e';
+  const api_key = '3444e26e';
   const search_val = req.params['search']
 
   const API_URL = head + search_val + api_key
