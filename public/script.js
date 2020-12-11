@@ -32,8 +32,6 @@ const titles = []
 //     .then(blob => blob.json())
 //     .then(data => titles.push(...data))
 
-
-
 function findMatches(titleToMatch, titles) { 
     return titles.filter(place => {
         const regex = new RegExp(wordToMatch, 'gi');
@@ -74,8 +72,6 @@ function displayMatches() {
     suggestions.innerHTML = html;
 
 }
-
-
 
 const searchInput = document.querySelector('.search');
 const suggestions = document.querySelector('.suggestions');
