@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 // function handleClick(event) {
 // }
 // async function main() {
@@ -113,6 +114,28 @@ function getMovies(searchText) {
             });
 
             $('#movies').html(output);
+=======
+
+
+async function main() {
+    try {
+
+        const form = document.querySelector('.movie');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const formData = $(event.target).serializeArray();
+            console.log(formData);
+
+            search = formData[0].value;
+            search = search.replace(/\s/g, "+");
+          
+
+            fetch('/api/'+search)
+                .then(response => response.json())
+                .then(data => console.log(data));
+                
+
+>>>>>>> Stashed changes
         })
         .catch((err) => {
             console.log(err);
@@ -125,6 +148,7 @@ function movieSelected(id) {
     return false;
 }
 
+<<<<<<< Updated upstream
 function getMovie() {
     let movieId = sessionStorage.getItem('movieId');
 
@@ -134,6 +158,58 @@ function getMovie() {
             let movie = response.data;
 
             let output = `
+=======
+// exist & be invoked inside main function 
+/*
+$(document).ready(() => {
+    $('#searchForm').on('submit', (e) => {
+      let searchText = $('#searchText').val();
+      getMovies(searchText);
+      e.preventDefault();
+    });
+  });
+  
+  function getMovies(searchText){
+    axios.get('http://www.omdbapi.com?s='+searchText)
+      .then((response) => {
+        console.log(response);
+        let movies = response.data.Search;
+        let output = '';
+        $.each(movies, (index, movie) => {
+          output += `
+            <div class="col-md-3">
+              <div class="well text-center">
+                <img src="${movie.Poster}">
+                <h5>${movie.Title}</h5>
+                <a onclick="movieSelected('${movie.imdbID}')" class="btn btn-primary" href="#">Movie Details</a>
+              </div>
+            </div>
+          `;
+        });
+  
+        $('#movies').html(output);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+  
+  function movieSelected(id){
+    sessionStorage.setItem('movieId', id);
+    window.location = 'movie.html';
+    return false;
+  }
+  
+  function getMovie(){
+    let movieId = sessionStorage.getItem('movieId');
+  
+    axios.get('http://www.omdbapi.com?i='+movieId)
+      .then((response) => {
+        console.log(response);
+        let movie = response.data;
+  
+        let output =`
+>>>>>>> Stashed changes
           <div class="row">
             <div class="col-md-4">
               <img src="${movie.Poster}" class="thumbnail">
@@ -161,6 +237,7 @@ function getMovie() {
             </div>
           </div>
         `;
+<<<<<<< Updated upstream
 
             $('#movie').html(output);
         })
@@ -168,3 +245,13 @@ function getMovie() {
             console.log(err);
         });
 }
+=======
+  
+        $('#movie').html(output);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+  */
+>>>>>>> Stashed changes
