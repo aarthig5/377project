@@ -13,7 +13,8 @@ async function main() {
 
             fetch('/api/' + search)
                 .then(response => response.json())
-                .then(data => console.log(data));
+                // .then(data => console.log(data));
+                .then(data => displayMatches(data));
         })
 
         //console.log('Main function called');
@@ -34,16 +35,20 @@ const titles = []
 
 
 
-function findMatches(titleToMatch, titles) { 
-    return titles.filter(place => {
-        const regex = new RegExp(wordToMatch, 'gi');
-        return place.Title.match(regex) || place.Genre.match(regex) || place.Rated.match(regex) || place.Plot.match(regex) || place.Released.match(regex)
-  });
-}
+// function findMatches(titleToMatch, titles) { 
+//     return titles.filter(place => {
+//         const regex = new RegExp(wordToMatch, 'gi');
+//         return place.Title.match(regex) || place.Genre.match(regex) || place.Rated.match(regex) || place.Plot.match(regex) || place.Released.match(regex)
+//   });
+// }
 
-console.log(titles);
+// console.log(titles);
 
-function displayMatches() {
+function displayMatches(data) {
+    console.log(data.Title);
+    let placehtml = `<li>${data.Title}</li>`;
+    const target = document.querySelector('.suggestions');
+    target.innerHTML = placehtml;
     const matchArray = findMatches(this.value, titles);
     const html = matchArray.map(place => { 
         const regex = new RegExp(this.value, 'gi');
@@ -74,14 +79,54 @@ function displayMatches() {
     suggestions.innerHTML = html;
 
 }
+// function findMatches(titleToMatch, titles) { 
+//     return titles.filter(place => {
+//         const regex = new RegExp(wordToMatch, 'gi');
+//         return place.Title.match(regex) || place.Genre.match(regex) || place.Rated.match(regex) || place.Plot.match(regex) || place.Released.match(regex)
+//   });
+// }
+
+// console.log(titles);
+
+// function displayMatches() {
+//     const matchArray = findMatches(this.value, titles);
+//     const html = matchArray.map(place => { 
+//         const regex = new RegExp(this.value, 'gi');
+//         const titleName = place.Title.replace(regex, `<span class="h1">${this.value}</span>`);
+//         const genreName = place.Genre.replace(regex, `<span class="h1">${this.value}</span>`);
+//         const ratedName = place.Rates.replace(regex, `<span class="h1">${this.value}</span>`);
+//         const plotName = place.Plot.replace(regex, `<span class="h1">${this.value}</span>`);
+//         const releasedName = place.Released.replace(regex, `<span class="h1">${this.value}</span>`)
+
+
+//         // const address = place.address_line_1.replace(regex,`<span class="h1">${this.value}</span>`);
+//         // const city = place.city.replace(regex, `<span class="h1">${this.value}</span>`);
+//         // const state = place.state.replace(regex, `<span class="h1">${this.value}</span>`);
+    
+//         return `
+//             <li> 
+//                 <span class="name">${titleName}</span>
+//                 <span class="address">${genreName}</span>
+//                 <pan class ="state"> ${ratedName}</span>
+//                 <span class="name">${plotName}</span>
+//                 <span class="address">${releasedName}</span>
+
+//             </li>
+//     `;
+//     }).join('');
+
+//     // console.log(macthArray);
+//     suggestions.innerHTML = html;
+
+// }
 
 
 
-const searchInput = document.querySelector('.search');
-const suggestions = document.querySelector('.suggestions');
+// const searchInput = document.querySelector('.search');
+// const suggestions = document.querySelector('.suggestions');
 
-searchInput.addEventListener('change', displayMatches);
-searchInput.addEventListener('keyup', displayMatches);
+// searchInput.addEventListener('change', displayMatches);
+// searchInput.addEventListener('keyup', displayMatches);
 
 
 window.onload = main;
