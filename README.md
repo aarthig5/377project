@@ -11,7 +11,7 @@ Our group decided to create a program that functions similiar to the application
 Link to Heroku Webpage!
 
 ###### Description of Target Browser:
-This wev application works well with Chrome, Safari, and Firefox. 
+This web application works well with Chrome, Safari, and Firefox. 
 
 ###### Link to user Manuel:
 Link to User Manuel
