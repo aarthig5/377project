@@ -1,15 +1,68 @@
-<<<<<<< Updated upstream
-=======
-#movies img, #movie img{
-    width:100%;
-  }
-  
-  @media(min-width:960px){
-    #movies .col-md-3 .well{
-      height: 390px;
-    }
-  
-    #movies .col-md-3 img{
-      height:240px;
-    }
->>>>>>> Stashed changes
+body {
+  background-color: blue;
+
+  margin: 0;
+  padding:0;
+}
+
+.container {
+  margin:auto;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  vertical-align: middle;
+  text-shadow: 2px 2px 10px black;
+  font-weight: 100;
+}
+
+
+.header img {
+
+  display: block;
+  height: 60px;
+  padding-top: 20.15px;
+}
+
+input {
+  height: 38px;
+  width: 400px;
+  display: inline-block;
+  font-size: 30;
+  border-style: solid;
+}
+.movie {
+  flex: auto;
+  max-width:800px;
+  padding: 0 16px;
+}
+
+#content ul {
+  max-width: 400px;
+  margin-left: 0px;
+  padding: 0px;
+  width: auto;
+  list-style: none;
+  display: block;
+}
+
+#content li{
+  background: radial-gradient(circle, rgba(255,248,220,1) 60%, rgba(220,220,220) 100%);
+  max-width: 400px;
+  margin-left: 0px;
+  margin-top: 20px;
+  padding: 30px;
+}
+
+.name {
+  font-size: 20;
+  color: black;
+  font-family: 'Itim', cursive;
+}
+.suggestions {
+  font-size: 20;
+  color: rgb(3, 0, 0);
+  font-family: 'Open Sans Condensed', sans-serif;    
+  flex-wrap: wrap;
+}
