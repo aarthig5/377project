@@ -14,13 +14,9 @@ Link to Heroku Webpage!
 This web application works well with Chrome, Safari, and Firefox. 
 
 ###### Link to user Manual:
-Link to User Manuel
-
-###### Link to Developer Manual:
-Link to Developer Manual
-
 [User Manual](https://github.com/aarthig5/377project/blob/master/docs/User.md)
 
+###### Link to Developer Manual:
 [Developer Manual](https://github.com/aarthig5/377project#developer-manual)
 
 # Developer Manual
