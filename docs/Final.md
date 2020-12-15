@@ -36,6 +36,7 @@
 - Too many requirements to fulfill for the project in a short time frame. 
 - Difficulty utilizing the database, and organizing movies based on specific variables, such as title, genre, and year. 
 - Understanding how to create a carousel like swipe method via Javascript. 
+- Because of the API key, we couldn't access certain information from the API. 
 
 ###### Possible future work directions with this problem
 - Expanding the data to be organized by other aspects, such as run time, rating, and lead actors, which would allow for deeper analytical insight in terms of the suggestion for the user.
