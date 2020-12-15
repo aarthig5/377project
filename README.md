@@ -13,13 +13,13 @@ Link to Heroku Webpage!
 ###### Description of Target Browser:
 This web application works well with Chrome, Safari, and Firefox. 
 
-###### Link to user Manuel:
+###### Link to user Manual:
 Link to User Manuel
 
-###### Link to Developer Manuel:
-Link to Developer Manuel
+###### Link to Developer Manual:
+Link to [Developer Manual]
 
-# Developer Manuel
+# Developer Manual
 
 ###### How to install your application and all dependencies?
 In order to properly run the web application, we need to install dependencies for the frontend, and the backend. After you have installed the code folder onto your computer, in your terminal type "npm install" to download the other dependencies for the backend to run on the localhost browser. Do the same for the frontend dependencies as well.  
