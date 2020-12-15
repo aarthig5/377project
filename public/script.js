@@ -55,6 +55,7 @@ function displayMatches(data) {
         const titleName = movie.Title;
         const yearName = movie.Year;
         const imdbID = movie.imdbID
+        const poster = movie.Poster;
         // const plotName = movie.Plot.replace(regex, `<span class="h1">${this.value}</span>`);
         // const releasedName = movie.Released.replace(regex, `<span class="h1">${this.value}</span>`)
 
@@ -72,7 +73,8 @@ function displayMatches(data) {
                 <br>
                 IMDB ID: 
                 <span class="imdbid">${imdbID}</span>
-                <p></p>
+                <p></p><br>
+                <img src="${poster}"/>
             </li>
     `;
     });
