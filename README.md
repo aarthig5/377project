@@ -17,7 +17,7 @@ This web application works well with Chrome, Safari, and Firefox.
 Link to User Manuel
 
 ###### Link to Developer Manual:
-Link to [Developer Manual]
+Link to Developer Manual
 
 # Developer Manual
 
