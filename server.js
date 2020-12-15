@@ -5,6 +5,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 
+
 dotenv.config();
 
 const app = express();
@@ -24,7 +25,7 @@ app.use((req, res, next) => {
 app.get('/api/:search', async (req, res) => {
   console.log('GET request detected');
 
-  const head = 'http://www.omdbapi.com/?t='
+  const head = 'http://www.omdbapi.com/?s='
   const api_key = '&apikey=3444e26e';
   const search_val = req.params['search']
 
