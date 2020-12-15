@@ -19,6 +19,10 @@ Link to User Manuel
 ###### Link to Developer Manual:
 Link to Developer Manual
 
+[User Manual](https://github.com/aarthig5/377project/blob/master/docs/User.md)
+
+[Developer Manual](https://github.com/aarthig5/377project#developer-manual)
+
 # Developer Manual
 
 ###### How to install your application and all dependencies?
